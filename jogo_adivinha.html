@@ -18,27 +18,28 @@
             pulalinha();
         }
 
-        function sorteia(n) {
+        var numeroPensado = Math.round(Math.random() * 10);
+        var cont = 1;
+        mostra(numeroPensado)
 
-            Math.round(Math.random() * n);
-        }
+        while(cont <= 3) {
 
-        var numeroPensado = sorteia(10);
+            var chute = parseInt(prompt("Digite seu palpite: "));
 
-        var chute = parseInt(prompt("Digite seu palpite: "));
+            if(chute == numeroPensado) {
 
-        if(chute == numeroPensado) {
-
-            mostra("Você acertou!");
-        } else {
-
-            if(chute > numeroPensado) {
-                mostra("Você errou! Seu chute é maior que o número pensado!");
+                mostra("Você acertou!");
+                break;
             } else {
 
-                mostra("Você errou! Seu chute é menor que o número pensado!");
+                mostra("Você errou!")
             }
+            cont++;
         }
+
+        mostra("FIM")
+
+        
     </script>
 </body>
 </html>
