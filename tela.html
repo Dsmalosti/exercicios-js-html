@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+<canvas width="800" height="600"></canvas>
+
+<script>
+
+    // Rceber informação da tela do htmlc
+    var tela = document.querySelector('canvas'); 
+    // Declarar a variavel pincel e o tipo de desenho
+    var pincel = tela.getContext('2d');
+
+    // Cor do desenho
+    pincel.fillStyle = 'red';
+    // fillRect esta informando que o formato do desenho sera retangular
+    // 0 = comeco do parametro x, 0 = comeco do parametro y
+    // 600 = fim do parametro x, 400 = fim do parametro y
+    pincel.fillRect(0, 0, 800, 200);
+
+    pincel.fillStyle = 'yellow';
+    pincel.fillRect(0, 200, 800, 400);
+
+    pincel.fillStyle = 'green';
+    pincel.fillRect(0, 400, 800, 600);
+
+    // Fazendo um triangulo
+    pincel.fillStyle = 'blue';
+    pincel.beginPath();
+    pincel.moveTo(400, 300);
+    pincel.lineTo(266, 600);
+    pincel.lineTo(532, 600);
+    pincel.fill();
+
+    // ffazendo um circulo
+    pincel.fillStyle = 'white';
+    pincel.beginPath();
+    pincel.arc(400, 300, 50, 0, 2 * 3.14)
+    pincel.fill();
+
+
+
+</script>
